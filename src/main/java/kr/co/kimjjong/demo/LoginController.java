@@ -24,7 +24,7 @@ public class LoginController {
     @PostMapping("/login")
     public String Login(@RequestBody Map<String, String> loginInfo) throws ExecutionException, InterruptedException, IOException {
         Firestore db = FirestoreClient.getFirestore();
-        DocumentReference docRef = db.collection("users").document("jzzW5WMRqt6u3NaMwYqo");
+        DocumentReference docRef = db.collection("user").document("jzzW5WMRqt6u3NaMwYqo");
 
         ApiFuture<DocumentSnapshot> future = docRef.get();
 
